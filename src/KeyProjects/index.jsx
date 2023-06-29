@@ -64,14 +64,28 @@ let KeyProjects = () => {
             justifyContent="center"
           >
             <Tooltip title="Live site" placement="top">
-              <IconButton sx={{ color: "white" }}>
-                <Language sx={{ color: "white", fontSize: "3rem" }}></Language>
-              </IconButton>
+              <a
+                href="https://socialize-mern.click/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconButton sx={{ color: "white" }}>
+                  <Language
+                    sx={{ color: "white", fontSize: "3rem" }}
+                  ></Language>
+                </IconButton>
+              </a>
             </Tooltip>
             <Tooltip title="Repository" placement="bottom">
-              <IconButton sx={{ color: "white" }}>
-                <GitHub sx={{ color: "white", fontSize: "3rem" }}></GitHub>
-              </IconButton>
+              <a
+                href="https://github.com/aleBranching/sociopedia-mern/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconButton sx={{ color: "white" }}>
+                  <GitHub sx={{ color: "white", fontSize: "3rem" }}></GitHub>
+                </IconButton>
+              </a>
             </Tooltip>
           </Box>
           <img src={sociopedia} height="350rem" width="700rem"></img>
