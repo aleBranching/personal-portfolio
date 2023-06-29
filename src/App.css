@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+div.aPage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.app {
+  font-family: "Rubik", sans-serif;
+  background-color: rgb(18 24 27 / 1);
+}
+
+div.homePage {
+}
+
+.bounce {
+  position: relative;
+  top: 0;
+  animation: myBounce 5s;
+  font-size: 3rem;
+  display: block;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    /* -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0); */
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
