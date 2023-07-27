@@ -1,10 +1,18 @@
 import { Box, Typography } from "@mui/material";
 
-let LineUnder = ({ variant, height, color, text, hoverEffect, textColor }) => {
+let LineUnder = ({
+  variant,
+  height,
+  color,
+  text,
+  hoverEffect,
+  textColor,
+  style,
+}) => {
   if (!hoverEffect) {
     return (
       <>
-        <Box position="relative">
+        <Box position="relative" sx={...style}>
           <Typography
             variant={variant}
             color={textColor && textColor}

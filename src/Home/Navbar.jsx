@@ -1,17 +1,32 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { useEffect } from "react";
 import LineUnder from "../components/LineUnder";
 
 let Navbar = () => {
   let { custom } = useTheme().palette;
+  let { sizing } = useTheme();
+  let isMediumQuerry = useMediaQuery("(max-width:1250px)");
+
+  let isMobileSmall = useMediaQuery("(max-width:700px)");
+  let isMobileMedium = !isMobileSmall && isMediumQuerry;
+  let isSmaller = isMediumQuerry;
+  let smallerSize = "h6";
+
+  useEffect(() => {
+    // console.log(`calc(100vw - ${sizing.globalPadding})`);
+  });
   return (
     <>
       <Box
         sx={{
           color: "white",
           fontSize: 40,
-          width: "100vw",
-          padding: "0 4rem",
-          height: "5rem",
+          width: `calc(100vw - 2*${sizing.globalPadding})`,
+          // width: `calc(100vw - 10rem)`,
+          // width: `calc(100vw - 10rem)`,
+          // width: `calc(100vw)`,
+          // padding: "0 4rem",
+          height: "3rem",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -20,34 +35,36 @@ let Navbar = () => {
       >
         <LineUnder
           color={custom.yellow}
-          height="0.5rem"
+          height={!isSmaller ? "0.5rem" : "0.4rem"}
           text="Aleksas Kliska"
-          variant="h4"
+          variant={!isSmaller ? "h4" : "h5"}
           hoverEffect={false}
         ></LineUnder>
-        <Box sx={{ display: "flex", gap: "2rem" }}>
-          <LineUnder
-            color={custom.yellow}
-            height="0.5rem"
-            text="Key Projects"
-            variant="h6"
-            hoverEffect={true}
-          ></LineUnder>
-          <LineUnder
-            color={custom.yellow}
-            height="0.5rem"
-            text="Skills"
-            variant="h6"
-            hoverEffect={true}
-          ></LineUnder>
-          <LineUnder
-            color={custom.yellow}
-            height="0.5rem"
-            text="Extra Projects"
-            variant="h6"
-            hoverEffect={true}
-          ></LineUnder>
-        </Box>
+        {!isMobileSmall && (
+          <Box sx={{ display: "flex", gap: "2rem" }}>
+            <LineUnder
+              color={custom.yellow}
+              height="0.5rem"
+              text="Key Projects"
+              variant={isMobileSmall ? "body1" : "h6"}
+              hoverEffect={true}
+            ></LineUnder>
+            <LineUnder
+              color={custom.yellow}
+              height="0.5rem"
+              text="Skills"
+              variant="h6"
+              hoverEffect={true}
+            ></LineUnder>
+            <LineUnder
+              color={custom.yellow}
+              height="0.5rem"
+              text="Extra Projects"
+              variant="h6"
+              hoverEffect={true}
+            ></LineUnder>
+          </Box>
+        )}
       </Box>
     </>
   );
