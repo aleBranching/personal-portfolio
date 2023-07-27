@@ -3,8 +3,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import "./App.css";
 import Home from "./Home";
+// import KeyProjects from "./KeyProjects";
 import KeyProjects from "./KeyProjects";
-import SecondKeyProjects from "./SecondKeyProjects";
 import { yellow } from "@mui/material/colors";
 
 const theme = createTheme({
@@ -36,7 +36,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Home></Home>
         {/* <KeyProjects></KeyProjects> */}
-        <SecondKeyProjects></SecondKeyProjects>
+        <KeyProjects></KeyProjects>
       </ThemeProvider>
     </div>
   );
