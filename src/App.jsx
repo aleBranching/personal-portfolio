@@ -6,6 +6,7 @@ import Home from "./Home";
 // import KeyProjects from "./KeyProjects";
 import KeyProjects from "./KeyProjects";
 import { yellow } from "@mui/material/colors";
+import AboutMe from "./AboutMe";
 
 const theme = createTheme({
   typography: {
@@ -37,6 +38,7 @@ function App() {
         <Home></Home>
         {/* <KeyProjects></KeyProjects> */}
         <KeyProjects></KeyProjects>
+        <AboutMe></AboutMe>
       </ThemeProvider>
     </div>
   );

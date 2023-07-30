@@ -4,6 +4,16 @@
   max-width: 4em;
 }
 
+/* A hack to fix a white background for an edge case of some phones having white background at bottom due to toolbar */
+html {
+  background: linear-gradient(
+    176deg,
+    rgb(18, 24, 27) 50%,
+    rgb(32, 39, 55) 100%
+  );
+  background-attachment: fixed;
+}
+
 /* if you want to change the original color */
 .devicon-devicon-react-original path {
   fill: #277dee;
