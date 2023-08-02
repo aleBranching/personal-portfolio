@@ -13,7 +13,6 @@ html {
   );
   background-attachment: fixed;
 }
-/* fake change */
 /* if you want to change the original color */
 .devicon-devicon-react-original path {
   fill: #277dee;
