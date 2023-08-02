@@ -12,7 +12,7 @@ let LineUnder = ({
   if (!hoverEffect) {
     return (
       <>
-        <Box position="relative" sx={...style}>
+        <Box position="relative" sx={{...style}}>
           <Typography
             variant={variant}
             color={textColor && textColor}

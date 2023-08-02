@@ -71,7 +71,7 @@ let Home = () => {
               // }}
             >
               <Box>
-                <Typography variant="h4" color="white" maxWidth="50rem">
+                <Typography variant="h5" color="white" maxWidth="50rem">
                   Welcome to my portfolio website! I'm a passionate web
                   developer eager to bring creative ideas to life. With a{" "}
                   <Typography
@@ -209,7 +209,7 @@ let Home = () => {
                         ? "1.1rem"
                         : isMobileSmall
                         ? "1.4rem"
-                        : "1.9rem"
+                        : "1.5rem"
                     }
                     color="white"
                     // maxWidth="60rem"
@@ -226,7 +226,7 @@ let Home = () => {
                         ? "1.1rem"
                         : isMobileSmall
                         ? "1.4rem"
-                        : "1.9rem"
+                        : "1.5rem"
                     }
                     color="white"
                     // maxWidth="60rem"

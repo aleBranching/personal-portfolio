@@ -30,7 +30,7 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
       <ProjectDetailBoxLeft
         padding="1rem"
         // width="40vw"
-        border="3px"
+        border="2px"
         display="flex"
         flexDirection="column"
         width={isMobile500 ? "90vw" : isMediumQuerry ? "70vw" : "40vw"}
@@ -57,7 +57,7 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
               </a>
             </Tooltip>
           )}
-          <Tooltip title="Repository" placement="bottom">
+          <Tooltip title="Repository" placement="top">
             <a href={repoURL} rel="noreferrer" target="_blank">
               <IconButton sx={{ color: "white" }}>
                 <GitHub
@@ -88,14 +88,16 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
           display: "flex",
           //   height: "5rem",
           //   width: "10rem",
-          border: `2px solid #cc9c08`,
-          borderLeft: isMediumQuerry ? "2px solid #cc9c08" : "none",
-          borderTop: isMediumQuerry ? "none" : "2px solid #cc9c08",
+          border: `3px solid #cc9c08`,
+          borderLeft: isMediumQuerry ? "3px solid #cc9c08" : "none",
+          borderTop: isMediumQuerry ? "none" : "3px solid #cc9c08",
+          // position: "absolue",
+          // zIndex: "1",
           //   backgroundColor: "#21282b",
 
           transform: isMediumQuerry
-            ? "translate(0, -0.4rem)"
-            : "translate(-0.4rem, 0)",
+            ? "translate(0, -0.5rem)"
+            : "translate(-0.5rem, 0)",
           //   paddingLeft: "0.4rem",
           borderRadius: "4px",
         }}

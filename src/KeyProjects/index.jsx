@@ -57,8 +57,8 @@ const KeyProjects = () => {
           <li>Mongoose as the ORM</li>
           <li>Protected api routes</li>
           <li>MUI to get experience in using styled components</li>
-          <li>NodeJS Backend using MVC pattern</li>
-          <li>Redux for state managment and redux persist</li>
+          <li>NodeJS Backend seperated into models, routes, controllers</li>
+          <li>Redux for state managment with redux persist</li>
           <li>Forms with Formik and Yup</li>
         </ProjectCard>
 
@@ -89,9 +89,7 @@ const KeyProjects = () => {
           devIcons={["devicon-nodejs-plain", "devicon-docker-plain-wordmark"]}
           image={telegramBotGifCompressed}
           // siteURL={"https://alebranching.github.io/odin-battleships/"}
-          repoURL={
-            "https://github.com/aleBranching/odin-battleships/tree/main/"
-          }
+          repoURL={"https://github.com/aleBranching/telegram-indeed-bot/"}
         >
           <li>Project for fun</li>
           <li>

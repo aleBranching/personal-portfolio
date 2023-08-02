@@ -4,6 +4,7 @@ import {
   Container,
   TextField,
   Typography,
+  useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { useState } from "react";
@@ -11,6 +12,10 @@ import axios from "axios";
 
 let ContactForm = () => {
   let { palette } = useTheme();
+  let isMediumQuerry = useMediaQuery("(max-width:1250px)");
+
+  let isMobileSmall = useMediaQuery("(max-width:700px)");
+  let isMobile500 = useMediaQuery("(max-width:500px)");
   let [errorState, setErrorState] = useState(false);
   let [email, setEmail] = useState("");
   let [message, setMessage] = useState("");
@@ -35,8 +40,13 @@ let ContactForm = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
 
-    let res = await axios.post("localhost:5173/api", { email, message });
+    let res = await axios.post(
+      "https://personal-portfolio-backend-production-7638.up.railway.app/",
+      { email, message }
+    );
 
+    setMessage("");
+    setEmail("");
     console.log("the res: ", res);
     console.log("the email", email);
     console.log("the message", message);
@@ -53,8 +63,16 @@ let ContactForm = () => {
             justifyContent="center"
             // alignItems="center"
           >
-            <Typography color="white" variant="h5">
-              Send me a message directly to my phone via telegram 😱
+            <Typography
+              color="white"
+              sx={{
+                fontSize: ` ${
+                  isMobile500 ? "1rem" : isMediumQuerry ? "1.3rem" : "1.4rem"
+                }`,
+              }}
+            >
+              Send me a message directly to my phone via telegram 😱. Provide an
+              email so I can message back.
             </Typography>
             <TextField
               multiline

@@ -46,8 +46,8 @@ div.aPage {
   /* min-height: 100vh; */
   background: linear-gradient(
     176deg,
-    rgb(18, 24, 27) 50%,
-    rgb(32, 39, 55) 100%
+    rgb(23, 28, 39) 50%,
+    rgb(40, 48, 68) 100%
   );
   background-attachment: fixed;
 }
