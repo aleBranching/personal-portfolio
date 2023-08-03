@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useDebugValue, useEffect, useRef, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import "./App.css";
@@ -32,13 +32,40 @@ const theme = createTheme({
 });
 
 function App() {
+  const keyProjectsRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const contactMeRef = useRef(null);
+
+  const scrollToProjects = () => {
+    console.log("here");
+    // console.log(ref);
+    keyProjectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToAboutMe = () => {
+    console.log("here");
+    // console.log(ref);
+    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToContactMe = () => {
+    console.log("here");
+    // console.log(ref);
+    contactMeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="app">
       <ThemeProvider theme={theme}>
-        <Home></Home>
+        <Home
+          scrollToProjects={scrollToProjects}
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToContactMe={scrollToContactMe}
+        ></Home>
         {/* <KeyProjects></KeyProjects> */}
-        <KeyProjects></KeyProjects>
-        <AboutMe></AboutMe>
+        <div ref={keyProjectsRef}>
+          <KeyProjects></KeyProjects>
+        </div>
+        <div ref={aboutMeRef}>
+          <AboutMe ref={contactMeRef}></AboutMe>
+        </div>
       </ThemeProvider>
     </div>
   );

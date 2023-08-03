@@ -2,7 +2,7 @@ import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import LineUnder from "../components/LineUnder";
 
-let Navbar = () => {
+let Navbar = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
   let { custom } = useTheme().palette;
   let { sizing } = useTheme();
   let isMediumQuerry = useMediaQuery("(max-width:1250px)");
@@ -43,23 +43,29 @@ let Navbar = () => {
         {!isMobileSmall && (
           <Box sx={{ display: "flex", gap: "2rem" }}>
             <LineUnder
+              cursor={true}
               color={custom.yellow}
               height="0.5rem"
               text="Key Projects"
+              scrollFunction={scrollToProjects}
               variant={isMobileSmall ? "body1" : "h6"}
               hoverEffect={true}
             ></LineUnder>
             <LineUnder
+              cursor={true}
               color={custom.yellow}
               height="0.5rem"
-              text="Skills"
+              text="About Me"
               variant="h6"
+              scrollFunction={scrollToAboutMe}
               hoverEffect={true}
             ></LineUnder>
             <LineUnder
+              cursor={true}
               color={custom.yellow}
               height="0.5rem"
-              text="Extra Projects"
+              text="Contact Me"
+              scrollFunction={scrollToContactMe}
               variant="h6"
               hoverEffect={true}
             ></LineUnder>

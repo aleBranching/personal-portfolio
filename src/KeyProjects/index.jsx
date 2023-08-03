@@ -22,12 +22,13 @@ const KeyProjects = () => {
     console.log(red);
   });
   return (
-    <Container>
+    <Container background="inherit" sx={{ background: "inherit" }}>
       <Box
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
+        sx={{ background: "inherit" }}
         //   backgroundColor="rgb(18 24 27 )"
       >
         {/* <Typography color="white" variant="h3"> */}

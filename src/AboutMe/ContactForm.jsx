@@ -37,19 +37,33 @@ let ContactForm = () => {
     setErrorState(false);
     // console.log();
   };
+
+  let handleChange = (e) => {
+    setEmail(e.target.value);
+    if (errorState) {
+      setErrorState(!validateEmail(email));
+    }
+  };
+
   let handleSubmit = async (e) => {
     e.preventDefault();
-
-    let res = await axios.post(
-      "https://personal-portfolio-backend-production-7638.up.railway.app/",
-      { email, message }
-    );
+    if (email == "" || message == "") {
+      return;
+    }
+    let sendingEmail = email;
+    let sendingMessage = message;
 
     setMessage("");
     setEmail("");
+
+    let res = await axios.post(
+      "https://personal-portfolio-backend-production-7638.up.railway.app/",
+      { email: sendingEmail, message: sendingMessage }
+    );
+
     console.log("the res: ", res);
-    console.log("the email", email);
-    console.log("the message", message);
+    console.log("the email", sendingEmail);
+    console.log("the message", sendingMessage);
   };
   return (
     <>
@@ -85,7 +99,7 @@ let ContactForm = () => {
               label="Your email address:"
               id="Contact Form"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => handleChange(e)}
               inputProps={{
                 style: { color: "white" },
                 "&::placeholder": { color: "white" },
@@ -162,7 +176,7 @@ let ContactForm = () => {
               type="submit"
               color="test"
               sx={{
-                alignSelf: "end",
+                alignSelf: "center",
                 width: "8rem",
                 // marginTop: "2rem",
                 height: "2.5rem",

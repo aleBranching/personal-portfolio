@@ -7,12 +7,12 @@ import {
   Container,
 } from "@mui/material";
 // import { DEFAULT_ATTRIBUTE } from "@mui/system/cssVars/getInitColorSchemeScript";
-import { useEffect } from "react";
+import { forwardRef, useEffect } from "react";
 import LineUnder from "../components/LineUnder";
 import ContactForm from "./ContactForm";
 import { Language, GitHub, Email } from "@mui/icons-material";
 
-let AboutMe = () => {
+let AboutMe = forwardRef(({ contactMeRef }, ref) => {
   let { palette } = useTheme();
 
   let isMediumQuerry = useMediaQuery("(max-width:1250px)");
@@ -56,10 +56,27 @@ let AboutMe = () => {
           }}
           color="white"
         >
-          Aspiring Junior Web Developer with a passion for coding and a strong
-          desire to build a successful career in the tech industry. Proficient
-          in HTML, CSS, and JavaScript, with hands-on experience in creating
-          responsive and user-friendly websites.
+          After sucesfully completing undergraduate Computer Science at
+          University of York I've been learning about web development while
+          holding a part time job.
+        </Typography>
+
+        <Typography
+          paddingTop="1rem"
+          sx={{
+            fontSize: ` ${
+              isMobile500 ? "1rem" : isMediumQuerry ? "1.3rem" : "1.4rem"
+            }`,
+          }}
+          color="white"
+        >
+          Following The Odin Project, has significantly fortified my web
+          development fundamentals. Starting from the ground up with simple HTML
+          and CSS websites, I've steadily grown into a React developer with a
+          solid grasp of the inner workings. This hands-on approach, focused on
+          projects, allowed me to apply my learning effectively. Additionally,
+          delving into the MDN learning guide has provided me with a strong
+          foundation in HTML, CSS, and Javascript.
         </Typography>
         <Typography
           paddingTop="1rem"
@@ -70,12 +87,23 @@ let AboutMe = () => {
           }}
           color="white"
         >
-          Eager to learn and adapt to new technologies and frameworks. Highly
-          detail-oriented, dedicated, and driven to deliver high-quality
-          results. A team player with excellent communication skills, eager to
-          contribute to a dynamic and innovative development environment.
-          Seeking an opportunity to grow and make a meaningful impact in a
-          supportive and collaborative web development team.
+          I am consistently advancing as a developer, utilizing Linux with i3wm
+          (a tiling window manager) on a daily basis. My proficiency extends to
+          becoming adept with vim, further enhancing my skill set.
+        </Typography>
+        <Typography
+          paddingTop="1rem"
+          sx={{
+            fontSize: ` ${
+              isMobile500 ? "1rem" : isMediumQuerry ? "1.3rem" : "1.4rem"
+            }`,
+          }}
+          color="white"
+        >
+          The next focus is on crafting a web app catering to multilingual
+          readers. This platform aims to provide real-time translations of
+          specific words upon touch, allowing users to catalog these into a
+          structured flashcard system.
         </Typography>
       </Container>
       <LineUnder
@@ -88,7 +116,9 @@ let AboutMe = () => {
         color={palette.custom.red}
         style={{ margin: "4rem 0 4rem 0" }}
       ></LineUnder>
-      <ContactForm></ContactForm>
+      <div ref={ref}>
+        <ContactForm></ContactForm>
+      </div>
       <Typography sx={{ color: "white", marginTop: "2rem" }} variant="h4">
         Or
       </Typography>
@@ -134,13 +164,21 @@ let AboutMe = () => {
               fontSize: `${isMobileSmall ? "2rem" : "3rem"}`,
             }}
           ></Email>
-          <Typography variant="h5" sx={{ color: "white" }}>
+          <Typography
+            // variant={isMobileSmall ? "" : "h5"}
+            sx={{
+              color: "white",
+              fontSize: ` ${
+                isMobile500 ? "1rem" : isMediumQuerry ? "1.3rem" : "1.4rem"
+              }`,
+            }}
+          >
             aleksask789@gmail.com
           </Typography>
         </Box>
       </Box>
     </Box>
   );
-};
+});
 
 export default AboutMe;

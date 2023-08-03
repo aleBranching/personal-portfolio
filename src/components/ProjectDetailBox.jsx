@@ -9,8 +9,9 @@ const ProjectDetailBoxLeft = styled(Box)(({ border, theme }) => ({
   //   width: "10rem",
   //   padding: "2rem",
   // backgroundColor: "hsl(218, 12%, 15%)",
-  position: "absolue",
+  // position: "absolue",
   zIndex: "2",
+  background: "inherit",
   border: `${border} solid ${theme.palette.custom.yellow}`,
   boxShadow:
     "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",

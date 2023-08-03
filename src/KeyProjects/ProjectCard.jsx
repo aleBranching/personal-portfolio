@@ -26,6 +26,7 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
       display="flex"
       marginTop="3rem"
       flexDirection={isMediumQuerry ? "column" : "row"}
+      sx={{ background: "inherit" }}
     >
       <ProjectDetailBoxLeft
         padding="1rem"
@@ -99,7 +100,9 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
             ? "translate(0, -0.5rem)"
             : "translate(-0.5rem, 0)",
           //   paddingLeft: "0.4rem",
-          borderRadius: "4px",
+          borderRadius: isMediumQuerry
+            ? "0px 0px 4px 4px;"
+            : "0px 4px 4px 0px;",
         }}
         padding="1.4rem 1rem 0rem 1rem"
         // height="100%"

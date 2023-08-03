@@ -14,7 +14,7 @@ import { useEffect } from "react";
 // import { css } from "@emotion/react";
 // import { css } from "@emotion/react";
 
-let Home = () => {
+let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
   let [isHovering, setIsHovering] = useState(false);
 
   let isMediumQuerry = useMediaQuery("(max-width:1250px)");
@@ -51,7 +51,11 @@ let Home = () => {
       {/* <Box padding={`0 ${globalPadding}rem`}> */}
       <Box padding={`0rem 2rem 0rem 2rem`}>
         {/* <Box> */}
-        <Navbar></Navbar>
+        <Navbar
+          scrollToProjects={scrollToProjects}
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToContactMe={scrollToContactMe}
+        ></Navbar>
 
         {!isSmaller ? (
           <>
@@ -72,9 +76,12 @@ let Home = () => {
             >
               <Box>
                 <Typography variant="h5" color="white" maxWidth="50rem">
-                  Welcome to my portfolio website! I'm a passionate web
-                  developer eager to bring creative ideas to life. With a{" "}
-                  <Typography
+                  Welcome to my portfolio website! Passionate web developer
+                  eager to bring creative ideas to life. Seeking an opportunity
+                  to grow and make a meaningful impact in a supportive and
+                  collaborative web development team. Let's collaborate and
+                  create something amazing together!
+                  {/* <Typography
                     variant="h4"
                     display="inline"
                     // color="white"
@@ -96,10 +103,10 @@ let Home = () => {
                         }}
                       ></img>
                     )}
-                  </Typography>{" "}
-                  to learn and a fresh perspective, I specialize in and
+                  </Typography>{" "} */}
+                  {/* to learn and a fresh perspective, I specialize in and
                   functional websites. Let's collaborate and create something
-                  amazing together!
+                  amazing together! */}
                 </Typography>
                 <Button
                   variant="contained"
@@ -215,10 +222,12 @@ let Home = () => {
                     // maxWidth="60rem"
                     // width="clamp(45ch, 50%, 75ch)"
                   >
-                    Welcome to my portfolio website! I'm a passionate web
-                    developer eager to bring creative ideas to life.
+                    Welcome to my portfolio website! Passionate web developer
+                    eager to bring creative ideas to life. Looking for a job
+                    where I can grow and learn as a developer. Let's collaborate
+                    and create something amazing together!
                   </Typography>
-                  <Typography
+                  {/* <Typography
                     // variant="h4"
                     // align="center"
                     fontSize={
@@ -261,7 +270,7 @@ let Home = () => {
                     to learn and a fresh perspective, I specialize in and
                     functional websites. Let's collaborate and create something
                     amazing together!
-                  </Typography>
+                  </Typography> */}
                 </Box>
 
                 {/* <button

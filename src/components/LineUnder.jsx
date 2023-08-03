@@ -8,11 +8,16 @@ let LineUnder = ({
   hoverEffect,
   textColor,
   style,
+  scrollFunction,
+  cursor,
 }) => {
   if (!hoverEffect) {
+    let handleClick = () => {
+      console.log("AAAAA");
+    };
     return (
       <>
-        <Box position="relative" sx={{...style}}>
+        <Box position="relative" onClick={scrollFunction} sx={{ ...style }}>
           <Typography
             variant={variant}
             color={textColor && textColor}
@@ -25,6 +30,7 @@ let LineUnder = ({
                 backgroundColor: color,
                 width: "100%",
                 height: height,
+                cursor: cursor && "pointer",
               },
             }}
           >
@@ -36,7 +42,11 @@ let LineUnder = ({
   }
   return (
     <>
-      <Box position="relative">
+      <Box
+        position="relative"
+        onClick={scrollFunction}
+        sx={{ cursor: cursor && "pointer" }}
+      >
         <Typography
           variant={variant}
           sx={{
