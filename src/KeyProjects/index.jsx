@@ -58,7 +58,7 @@ const KeyProjects = () => {
           <li>Mongoose as the ORM</li>
           <li>Protected api routes</li>
           <li>MUI to get experience in using styled components</li>
-          <li>NodeJS Backend seperated into models, routes, controllers</li>
+          <li>NodeJS Backend seperated into models, routes and controllers</li>
           <li>Redux for state managment with redux persist</li>
           <li>Forms with Formik and Yup</li>
         </ProjectCard>
@@ -94,7 +94,7 @@ const KeyProjects = () => {
         >
           <li>Project for fun</li>
           <li>
-            Allows for 3 searches in indeed every 15-30min and send you a
+            Allows for 3 searches in indeed every 15-30min and sends you a
             message about new jobs
           </li>
           <li>Includes dockerfile for easy deployment</li>

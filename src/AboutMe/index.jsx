@@ -58,7 +58,7 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
         >
           After sucesfully completing undergraduate Computer Science at
           University of York I've been learning about web development while
-          holding a part time job.
+          having a part time job.
         </Typography>
 
         <Typography
@@ -70,7 +70,7 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
           }}
           color="white"
         >
-          Following The Odin Project, has significantly fortified my web
+          Following The Odin Project has significantly fortified my web
           development fundamentals. Starting from the ground up with simple HTML
           and CSS websites, I've steadily grown into a React developer with a
           solid grasp of the inner workings. This hands-on approach, focused on
@@ -100,7 +100,7 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
           }}
           color="white"
         >
-          The next focus is on crafting a web app catering to multilingual
+          My next focus is on crafting a web app catering to multilingual
           readers. This platform aims to provide real-time translations of
           specific words upon touch, allowing users to catalog these into a
           structured flashcard system.

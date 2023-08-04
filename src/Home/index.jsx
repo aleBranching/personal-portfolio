@@ -76,11 +76,11 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
             >
               <Box>
                 <Typography variant="h5" color="white" maxWidth="50rem">
-                  Welcome to my portfolio website! Passionate web developer
-                  eager to bring creative ideas to life. Seeking an opportunity
-                  to grow and make a meaningful impact in a supportive and
-                  collaborative web development team. Let's collaborate and
-                  create something amazing together!
+                  Welcome to my portfolio website! I am a passionate web
+                  developer who's eager to bring creative ideas to life. Seeking
+                  an opportunity to grow and make a meaningful impact in a
+                  supportive and collaborative web development team. Let's
+                  collaborate and create something amazing together!
                   {/* <Typography
                     variant="h4"
                     display="inline"

@@ -85,8 +85,8 @@ let ContactForm = () => {
                 }`,
               }}
             >
-              Send me a message directly to my phone via telegram 😱. Provide an
-              email so I can message back.
+              Send a message directly to my phone via telegram 😱. Please
+              provide an email so I can message back.
             </Typography>
             <TextField
               multiline

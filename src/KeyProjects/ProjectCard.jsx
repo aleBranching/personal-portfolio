@@ -40,6 +40,7 @@ let ProjectCard = ({ title, image, devIcons, repoURL, siteURL, children }) => {
           <Typography
             color="white"
             variant={isMobile500 ? "h6" : isMediumQuerry ? "h5" : "h4"}
+            sx={{ fontWeight: "bold" }}
             width="60%"
           >
             {title}
