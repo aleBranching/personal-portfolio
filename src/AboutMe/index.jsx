@@ -56,9 +56,9 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
           }}
           color="white"
         >
-          After sucesfully completing undergraduate Computer Science at
-          University of York I've been learning about web development while
-          having a part time job.
+          After graduating from the University of York with a BEng in Computer
+          Science, I have been expanding my skillset to include various
+          web-related technologies while holding a part time job.
         </Typography>
 
         <Typography
@@ -70,15 +70,15 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
           }}
           color="white"
         >
-          Following The Odin Project has significantly fortified my web
-          development fundamentals. Starting from the ground up with simple HTML
-          and CSS websites, I've steadily grown into a React developer with a
-          solid grasp of the inner workings. This hands-on approach, focused on
-          projects, allowed me to apply my learning effectively. Additionally,
-          delving into the MDN learning guide has provided me with a strong
-          foundation in HTML, CSS, and Javascript.
+          My self learning has been structured with The Odin Project. This
+          allowed for a project based learning where each of the technology or
+          concepts that I learned were reinforced with a project built from the
+          ground up. It allowed me to grow into a React developer with a solid
+          grasp of the fundamentals. This was in addition to covering other
+          various resources such as MongoDB University and going through MDN
+          learning guide fully.
         </Typography>
-        <Typography
+        {/* <Typography
           paddingTop="1rem"
           sx={{
             fontSize: ` ${
@@ -90,7 +90,7 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
           I am consistently advancing as a developer, utilizing Linux with i3wm
           (a tiling window manager) on a daily basis. My proficiency extends to
           becoming adept with vim, further enhancing my skill set.
-        </Typography>
+        </Typography> */}
         <Typography
           paddingTop="1rem"
           sx={{
@@ -173,7 +173,7 @@ let AboutMe = forwardRef(({ contactMeRef }, ref) => {
               }`,
             }}
           >
-            aleksask789@gmail.com
+            aleksas.kliska@gmail.com
           </Typography>
         </Box>
       </Box>

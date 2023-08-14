@@ -48,6 +48,7 @@ let ContactForm = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
     if (email == "" || message == "") {
+      alert("email and message is needed");
       return;
     }
     let sendingEmail = email;
@@ -85,8 +86,7 @@ let ContactForm = () => {
                 }`,
               }}
             >
-              Send a message directly to my phone via telegram 😱. Please
-              provide an email so I can message back.
+              Send a message directly to my phone via telegram.
             </Typography>
             <TextField
               multiline

@@ -76,11 +76,10 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
             >
               <Box>
                 <Typography variant="h5" color="white" maxWidth="50rem">
-                  Welcome to my portfolio website! I am a passionate web
-                  developer who's eager to bring creative ideas to life. Seeking
-                  an opportunity to grow and make a meaningful impact in a
-                  supportive and collaborative web development team. Let's
-                  collaborate and create something amazing together!
+                  I'm a web developer based in the UK! Passionate web developer
+                  who's eager to bring creative ideas to life. Seeking an
+                  opportunity to grow and make a meaningful impact to a business
+                  with a supportive and collaborative team.
                   {/* <Typography
                     variant="h4"
                     display="inline"
@@ -222,10 +221,10 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
                     // maxWidth="60rem"
                     // width="clamp(45ch, 50%, 75ch)"
                   >
-                    Welcome to my portfolio website! Passionate web developer
-                    eager to bring creative ideas to life. Looking for a job
-                    where I can grow and learn as a developer. Let's collaborate
-                    and create something amazing together!
+                    I'm a web developer based in the UK! Passionate web
+                    developer who's eager to bring creative ideas to life.
+                    Seeking an opportunity to grow and make a meaningful impact
+                    to a business with a supportive and collaborative team.
                   </Typography>
                   {/* <Typography
                     // variant="h4"
