@@ -181,7 +181,7 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
 
                     // marginBottom: "auto",
                     objectFit: "cover",
-                    objectPosition: "80% 50%",
+                    objectPosition: "80% 40%",
                   }}
                   src={profilePic}
                 ></img>
