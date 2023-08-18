@@ -76,10 +76,10 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
             >
               <Box>
                 <Typography variant="h5" color="white" maxWidth="50rem">
-                  I'm a web developer based in the UK! Passionate web developer
-                  who's eager to bring creative ideas to life. Seeking an
-                  opportunity to grow and make a meaningful impact to a business
-                  with a supportive and collaborative team.
+                  I'm a web developer based in the UK! Eager to bring creative
+                  ideas to life. Seeking an opportunity to grow and make a
+                  meaningful impact to a business with a supportive and
+                  collaborative team.
                   {/* <Typography
                     variant="h4"
                     display="inline"
@@ -116,6 +116,8 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
                     height: "rem",
                     fontSize: "1.5rem",
                   }}
+                  href="https://cv-hosting-ak773.s3.eu-west-2.amazonaws.com/Aleksas+Kliska+CV.pdf"
+                  target="_blank"
                 >
                   View CV
                 </Button>
@@ -219,12 +221,13 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
                     }
                     color="white"
                     // maxWidth="60rem"
+                    // textAlign="center"
                     // width="clamp(45ch, 50%, 75ch)"
                   >
-                    I'm a web developer based in the UK! Passionate web
-                    developer who's eager to bring creative ideas to life.
-                    Seeking an opportunity to grow and make a meaningful impact
-                    to a business with a supportive and collaborative team.
+                    I'm a web developer based in the UK! Eager to bring creative
+                    ideas to life. Seeking an opportunity to grow and make a
+                    meaningful impact to a business with a supportive and
+                    collaborative team.
                   </Typography>
                   {/* <Typography
                     // variant="h4"
@@ -301,6 +304,8 @@ let Home = ({ scrollToProjects, scrollToAboutMe, scrollToContactMe }) => {
                 height: "2.5rem",
                 fontSize: "1.5rem",
               }}
+              href="https://cv-hosting-ak773.s3.eu-west-2.amazonaws.com/Aleksas+Kliska+CV.pdf"
+              target="_blank"
             >
               View CV
             </Button>
